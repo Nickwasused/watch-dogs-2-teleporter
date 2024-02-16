@@ -3,10 +3,10 @@ local function TeleportMenu()
 	menu:SetTitle("Yacht")
 
 	menu:AddButton("Inside", function()
-		teleport(1319.467529, -1670.586914, 22.069139)
+		just_tp(1319.467529, -1670.586914, 22.069139)
 	end)
 	menu:AddButton("Outside", function()
-		teleport(1320.583130, -1727.896973, 20.662670)
+		just_tp(1320.583130, -1727.896973, 20.662670)
 	end)
 
 	return menu

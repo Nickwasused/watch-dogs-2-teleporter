@@ -3,11 +3,10 @@ local function TeleportMenu()
 	menu:SetTitle("Noodle")
 
 	menu:AddButton("Outside", function()
-		teleport(-641.041992, 3120.737305, 20.515034)
+		just_tp(-641.041992, 3120.737305, 20.515034)
 	end)
 	menu:AddButton("Server", function()
-		LoadLayer("sv_01_officeplex_lma_mapsroom02")
-		teleport(-811.707397, 3168.902832, 9.005063)
+		Script().tp_state:LoadLayer_and_tp("sv_01_officeplex_lma_mapsroom02", -811.707397, 3168.902832, 9.005063)
 	end)
 
 	return menu

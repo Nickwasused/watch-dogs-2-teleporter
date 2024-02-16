@@ -4,12 +4,10 @@ local function TeleportMenu()
 
 	menu:AddButton("Lab", function()
 		LoadLayer("sf_08_soma_rensenselabs_hma")
-		LoadLayer("sf_08_soma_rensenselabs_sas")
-		teleport(354.804749, 705.479004, -10.3062401)
+		Script().tp_state:LoadLayer_and_tp("sf_08_soma_rensenselabs_sas", 354.804749, 705.479004, -10.3062401)
 	end)
 	menu:AddButton("Lab 2", function()
-		LoadLayer("sf_08_soma_rensenselabs_sas")
-		teleport(308.218262, 677.031860, -11.407912)
+		Script().tp_state:LoadLayer_and_tp("sf_08_soma_rensenselabs_sas", 308.218262, 677.031860, -11.407912)
 	end)
 
 	return menu

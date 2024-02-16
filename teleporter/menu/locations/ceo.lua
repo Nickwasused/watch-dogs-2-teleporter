@@ -1,13 +1,12 @@
 local function TeleportMenu()
 	local menu = UI.SimpleMenu()
-	menu:SetTitle("Ceo House")
+	menu:SetTitle("Gene Carcani's House")
 
 	menu:AddButton("Outside", function()
-		teleport(985.569519, 2621.929932, 70.018988)
+		just_tp(985.569519, 2621.929932, 70.018988)
 	end)
 	menu:AddButton("Inside", function()
-		LoadLayer("sf_06_ceohouse_lma")
-		teleport()
+		Script().tp_state:LoadLayer_and_tp("sf_06_ceohouse_lma", -2615.465820, -2793.795410, 20.495592)
 	end)
 
 	return menu

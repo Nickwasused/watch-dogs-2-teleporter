@@ -3,8 +3,7 @@ local function TeleportMenu()
 	menu:SetTitle("Horatio House")
 
 	menu:AddButton("Inside", function()
-		LoadLayer("oak_02_fruitvale_horatiohouse")
-		teleport(-2760.670898, 251.119873, 22.001978)
+		Script().tp_state:LoadLayer_and_tp("oak_02_fruitvale_horatiohouse", -2760.670898, 251.119873, 22.001978)
 	end)
 
 	return menu

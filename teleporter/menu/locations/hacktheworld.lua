@@ -3,10 +3,10 @@ local function TeleportMenu()
 	menu:SetTitle("Hacktheworld")
 
 	menu:AddButton("Earth View (Freecam)", function()
-		teleport(779.580750, 967.506226, 140.241776)
+		just_tp(779.580750, 967.506226, 140.241776)
 	end)
 	menu:AddButton("Dublin", function()
-		teleport(779.581482, 967.506409, 140.241867)
+		just_tp(779.581482, 967.506409, 140.241867)
 	end)
 
 	return menu

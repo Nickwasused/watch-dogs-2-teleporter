@@ -3,7 +3,7 @@ local function TeleportMenu()
 	menu:SetTitle("Center of the Map")
 
 	menu:AddButton("Center of the Map", function()
-		teleport(0, 0, 15)
+		just_tp(0, 0, 15)
 	end)
 
 	return menu

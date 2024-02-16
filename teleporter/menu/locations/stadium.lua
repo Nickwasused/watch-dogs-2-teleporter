@@ -3,11 +3,11 @@ local function TeleportMenu()
 	menu:SetTitle("Stadium")
 
 	menu:AddButton("Seats", function()
-		teleport(-96.434723, 975.228210, 60.001828)
+		just_tp(-96.434723, 975.228210, 60.001828)
 	end)
 	
 	menu:AddButton("Field", function()
-		teleport(-163.708557, 971.315735, 19.078425)
+		just_tp(-163.708557, 971.315735, 19.078425)
 	end)
 
 	return menu

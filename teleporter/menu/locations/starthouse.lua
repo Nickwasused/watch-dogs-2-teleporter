@@ -3,11 +3,10 @@ local function TeleportMenu()
 	menu:SetTitle("Start House")
 
 	menu:AddButton("Outside", function()
-		teleport(1120.954590, -2587.916594, 18.078384)
+		just_tp(1120.954590, -2587.916594, 18.078384)
 	end)
 	menu:AddButton("Inside", function()
-		LoadLayer("mar_02_marcusapartment_lma")
-		teleport(1124.191162, -2595.979004, 22.086386)
+		Script().tp_state:LoadLayer_and_tp("mar_02_marcusapartment_lma", 1124.191162, -2595.979004, 22.086386)
 	end)
 
 	return menu

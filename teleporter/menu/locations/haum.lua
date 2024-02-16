@@ -3,13 +3,11 @@ local function TeleportMenu()
 	menu:SetTitle("Haum")
 
 	menu:AddButton("Haum Server Room", function()
-		LoadLayer("sf_08_haumdatacenter_lma")
-		teleport(-238.007462, 176.088562, 63.054485)
+		Script().tp_state:LoadLayer_and_tp("sf_08_haumdatacenter_lma", -238.007462, 176.088562, 63.054485)
 	end)
 	
 	menu:AddButton("Haum Control Room", function()
-		LoadLayer("sf_08_haumdatacenter_lma")
-		teleport(-243.149017, 176.798553, 22.054327)
+		Script().tp_state:LoadLayer_and_tp("sf_08_haumdatacenter_lma", -243.149017, 176.798553, 22.054327)
 	end)
 
 	return menu

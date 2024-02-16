@@ -3,10 +3,10 @@ local function TeleportMenu()
 	menu:SetTitle("Fort Point")
 
 	menu:AddButton("Outside", function()
-		teleport(2119.341797, -1053.109009, 16.557859)
+		just_tp(2119.341797, -1053.109009, 16.557859)
 	end)
 	menu:AddButton("Inside", function()
-		teleport(2155.328857, -1080.221436, 16.564962)
+		just_tp(2155.328857, -1080.221436, 16.564962)
 	end)
 
 

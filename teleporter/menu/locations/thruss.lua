@@ -3,8 +3,7 @@ local function TeleportMenu()
 	menu:SetTitle("Thruss")
 
 	menu:AddButton("Penthouse", function()
-		LoadLayer("sf_08_skyscraper_lma")
-		teleport(13.167707, 253.989471, 131.002701)
+		Script().tp_state:LoadLayer_and_tp("sf_08_skyscraper_lma", 13.167707, 253.989471, 131.002701)
 	end)
 
 	return menu

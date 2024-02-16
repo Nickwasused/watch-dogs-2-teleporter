@@ -3,14 +3,13 @@ local function TeleportMenu()
 	menu:SetTitle("Galilel")
 
 	menu:AddButton("Outside", function()
-		teleport(-1264.047852, 3043.673340, 18.010941)
+		just_tp(-1264.047852, 3043.673340, 18.010941)
 	end)
 	menu:AddButton("Roof", function()
-		teleport(-1296.296387, 3097.360352, 71.068314)
+		just_tp(-1296.296387, 3097.360352, 71.068314)
 	end)
 	menu:AddButton("Inside", function()
-		LoadLayer("sv_02_divisionx_lma_hangarfloor")
-		teleport(-1279.329590, 3121.323730, 24.015215)
+		Script().tp_state:LoadLayer_and_tp("sv_02_divisionx_lma_hangarfloor", -1279.329590, 3121.323730, 24.015215)
 	end)
 
 	return menu
