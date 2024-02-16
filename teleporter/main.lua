@@ -6,5 +6,5 @@ include("/menu/loader/loader.lua")
 include("/menu/menu.lua")
 
 function script:OnLoad()
-	print("Script burningman main loaded!")
+	print("Loaded Watch Dogs 2 Teleporter.")
 end
