@@ -9,9 +9,10 @@ function script:CacheMenu(menu_callback)
 	end
 end
 
+
 -- Menu
 local menu = UI.SimpleMenu()
-Menu = menu
+menu:AddSearch("Search...")
 
 menu:SetTitle("Teleporter | Nickwasused")
 

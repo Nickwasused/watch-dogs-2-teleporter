@@ -1,7 +1,7 @@
 {
 	"name": "Teleporter",
 	"author": "Nickwasused",
-	"version": "0.2.3",
+	"version": "0.2.4",
 	
 	"entrypoint": "main.lua",
 	"keyBinds": {
