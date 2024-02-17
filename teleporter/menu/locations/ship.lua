@@ -1,6 +1,6 @@
 local function TeleportMenu()
 	local menu = UI.SimpleMenu()
-	menu:SetTitle("Ship")
+	menu:SetTitle("Shanghaied Ship")
 
 	menu:AddButton("Outside", function()
 		just_tp(3142.633789, -1845.312012, 23.890188)
@@ -12,4 +12,4 @@ local function TeleportMenu()
 	return menu
 end
 
-table.insert(MenuItems, { "Ship [Not Working]", "Teleport to Ship Locations", Script():CacheMenu(TeleportMenu) })
+table.insert(MenuItems, { "Shanghaied Ship [Not Working]", "Featured in Shanghaied", Script():CacheMenu(TeleportMenu) })
