@@ -2,8 +2,8 @@ local function TeleportMenu()
 	local menu = UI.SimpleMenu()
 	menu:SetTitle("Dusan Penthouse")
 
-	menu:AddButton("Dusan Penthouse", function()
-		Script().tp_state:LoadLayer_and_tp("sf_08_dusanpenthouse_lma", "Featured at the end of the Game.", 298.337494, 285.072327, 235.018411)
+	menu:AddButton("Dusan Penthouse", "Featured at the end of the Game.", function()
+		Script().tp_state:LoadLayer_and_tp("sf_08_dusanpenthouse_lma", 298.337494, 285.072327, 235.018411)
 	end)
 
 	return menu
