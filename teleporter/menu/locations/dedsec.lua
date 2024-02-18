@@ -3,7 +3,7 @@ local function TeleportMenu()
 	menu:SetTitle("Dedsec HQ")
 
 	menu:AddButton("San Francisco HQ | Outside", function()
-		Script().tp_state:LoadLayer_and_tp("sf_08_mission_central_hma_hackerspace", 809.033081, 921.227831, 33.60579)
+		just_tp(809.033081, 921.227831, 33.60579)
 	end)
 	menu:AddButton("San Francisco HQ | Inside", function()
 		Script().tp_state:LoadLayer_and_tp("sf_08_mission_central_hma_hackerspace", 809.969238, 917.381348, 27.271181)
