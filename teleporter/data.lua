@@ -44,5 +44,27 @@ DATA = {
             false,
             "This is the Air Gap computer"
         }
+    },
+    ["Burningman"] = {
+        ["Teleport to Burningman"] = {
+            "oak_05_burningman_lma",
+            -2615.465820, -2793.795410, 20.495592,
+            true,
+            ""
+        }
+    },
+    ["Ceo House"] = {
+        ["Outside"] = {
+            "",
+            985.569519, 2621.929932, 70.018988,
+            false,
+            ""
+        },
+        ["Inside"] = {
+            "L36M020_Main_IOP",
+            1001.001343, 2620.836426, 59.609257,
+            true,
+            "Gene Carcani's House"
+        }
     }
 }

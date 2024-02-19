@@ -13,18 +13,10 @@ tp_state._type = tp_state
 -- Init/Shutdown
 function tp_state:Init()
 	local scs = CScriptCallbackSystem_GetInstance()
-	--self.EventIDs.OnDie = scs:RegisterMissionEventCallback(GetLocalPlayerEntityId(), self, "OnDie", "Die", -1)
 end
 
 function tp_state:Shutdown()
 	local scs = CScriptCallbackSystem_GetInstance()
-	--scs:RemoveCallback(GetLocalPlayerEntityId(), self.EventIDs.OnDie)
-end
-
--- just load the layer. Commonly used when 2 layers are needed for one teleport
-function tp_state:LoadLayer(name)
-	script.tp_state:unload_last_mission()
-	LoadLMALayer(name, "0", 1, function() end, "")
 end
 
 -- load a lma layer then use the callback to on_loaded to do the teleport
@@ -32,12 +24,6 @@ end
 -- use mssion bool to load a layer that is specific for a mission like "S13M040_Main_ServerFarm"
 function tp_state:LoadLayer_and_tp(name, x, y, z, mission)
 	print(name .. " " .. x .. " " .. y .. " " .. z .. " ")
-	if script.tp_state.last_mission == name then
-		print("not unloading because tp point is in the same layer")
-	else
-		script.tp_state:unload_last_mission()
-	end
-	
 	ScriptHook.ShowNotification("loading " .. name)
 	script.tp_state.target_cord_x = x
 	script.tp_state.target_cord_y = y
@@ -48,6 +34,12 @@ function tp_state:LoadLayer_and_tp(name, x, y, z, mission)
 		script.tp_state.last_mission = name
 	else
 		LoadLMALayer(name, "0", 1, tp_state, "on_loaded")
+	end
+
+	if script.tp_state.last_mission == name then
+		print("not unloading because tp point is in the same layer")
+	else
+		script.tp_state:unload_last_mission()
 	end
 end
 
@@ -80,8 +72,8 @@ function tp_state:unload_last_mission()
 end
 
 function just_tp(x, y, z)
-	script.tp_state:unload_last_mission()
 	ScriptHook.Teleport(x, y, z)
+	script.tp_state:unload_last_mission()
 end
 
 local function GetFelonyTypeID(felonyTypeName)
