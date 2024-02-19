@@ -3,13 +3,13 @@
 DATA = {
     ["Alcatraz"] = {
         ["Teleport to Alcatraz"] = {
-            "",
+            {},
             237.084930, -1945.961426, 37.011242,
             false,
             ""
         },
         ["Teleport to Alcatraz (Inside)"] = {
-            "",
+            {},
             272.934814, -1981.156372, 37.099851,
             false,
             ""

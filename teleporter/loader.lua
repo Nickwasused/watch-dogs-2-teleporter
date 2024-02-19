@@ -58,7 +58,8 @@ function tp_state:on_loaded()
 	elseif script.tp_state.target_cord_z == nil then
 		ScriptHook.ShowNotification("There was an error!", 15)
 	else
-		ScriptHook.Teleport(script.tp_state.target_cord_x, script.tp_state.target_cord_y, script.tp_state.target_cord_z)
+		-- ScriptHook.Teleport(script.tp_state.target_cord_x, script.tp_state.target_cord_y, script.tp_state.target_cord_z)
+		SetEntityPosition(GetLocalPlayerEntityId(), script.tp_state.target_cord_x, script.tp_state.target_cord_y, script.tp_state.target_cord_z)
 		ClearWanted()
 		ScriptHook.ShowNotification("done")
 	end
