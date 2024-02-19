@@ -170,4 +170,170 @@ DATA = {
             ""
         }
     },
+    ["Galilel"] = {
+        ["Outside"] = {
+            {},
+            -1264.047852, 3043.673340, 18.010941,
+            false,
+            ""
+        },
+        ["Roof"] = {
+            {},
+            -1296.296387, 3097.360352, 71.068314,
+            false,
+            ""
+        },
+        ["Inside"] = {
+            {"sv_02_divisionx_lma_hangarfloor"},
+            -1279.329590, 3121.323730, 24.015215,
+            true,
+            ""
+        }
+    },
+    ["Hacktheworld"] = {
+        ["Japan"] = {
+            {"s13m040_main_iop"},
+            774.695374, 968.104614, 154.336700,
+            true,
+            "No floor collision"
+        },
+        ["Dublin"] = {
+            {"s13m040_main_iop"},
+            777.710815, 968.795288, 144.003937,
+            true,
+            "No wall collision"
+        },
+        ["Blume Data Center Bottom"] = {
+            {"S13M040_Main_ServerFarm"},
+            734.495972, 1023.327637, 175.005066,
+            true,
+            ""
+        },
+        ["Blume Data Center Top"] = {
+            {"S13M040_Main_ServerFarm"},
+            734.265137, 933.202271, 201.477875,
+            true,
+            ""
+        }
+    },
+    ["Haum"] = {
+        ["Haum Server Room"] = {
+            {"sf_08_haumdatacenter_lma"},
+            -238.007462, 176.088562, 63.054485,
+            false,
+            ""
+        },
+        ["Haum Control Room"] = {
+            {"sf_08_haumdatacenter_lma"},
+            -243.149017, 176.798553, 22.054327,
+            false,
+            ""
+        }
+    },
+    ["Horatio House"] = {
+        ["Inside"] = {
+            {"oak_02_fruitvale_horatiohouse"},
+            -2760.670898, 251.119873, 22.001978,
+            true,
+            ""
+        }
+    },
+    ["!nvite"] = {
+        ["Outside"] = {
+            {},
+            839.594543, 686.046143, 31.725556,
+            false,
+            ""
+        },
+        ["Inside"] = {
+            {"sf_08_invite_lma"},
+            875.124451, 644.192627, 32.374151,
+            false,
+            ""
+        },
+        ["Server"] = {
+            {"sf_08_invite_lma"},
+            867.473633, 648.186096, 26.826643,
+            false,
+            ""
+        },
+        ["Office"] = {
+            {"sf_08_invite_lma"},
+            865.608154, 635.059937, 55.814030,
+            false,
+            ""
+        }
+    },
+    ["Movie Studio"] = {
+        ["Outside"] = {
+            {},
+            1781.207275, -156.046768, 28.354439,
+            false,
+            ""
+        },
+        ["Inside"] = {
+            {"sf_04_moviestudio_lma"},
+            1814.354248, -166.817581, 27.874928,
+            false,
+            ""
+        }
+    },
+    ["New Dawn"] = {
+        ["Temple Outside"] = {
+            {},
+            1274.844482, 2783.192383, 84.500887,
+            false,
+            ""
+        },
+        ["Temple Inside (Top Floor)"] = {
+            {"svsm_w_14_lma"},
+            1294.563232, 2825.373047, 84.504898,
+            false,
+            ""
+        },
+        ["Temple Inside (Bottom Floor)"] = {
+            {"svsm_w_14_lma"},
+            1289.476563, 2814.760254, 42.529709,
+            false,
+            ""
+        },
+        ["Rehabcenter (Outside)"] = {
+            {},
+            2307.427246, 1811.083496, 31.696684,
+            false,
+            ""
+        },
+        ["Rehabcenter (Inside)"] = {
+            {"sf_06_rehab_center_lma"},
+            2338.862793, 1877.190430, 36.017680,
+            false,
+            ""
+        },
+        ["Recruitmentcenter (Outside)"] = {
+            {},
+            1278.031250, 1.994425, 44.458054,
+            false,
+            ""
+        },
+        ["Recruitmentcenter (Inside)"] = {
+            {"sf_02_recruitment_center_lma"},
+            1277.932617, -23.794327, 49.342812,
+            false,
+            ""
+        }
+    },
+    ["Noodle"] = {
+        ["Outside"] = {
+            {},
+            -641.041992, 3120.737305, 20.515034,
+            false,
+            ""
+        },
+        ["Inside"] = {
+            {"sv_01_officeplex_lma_mapsroom02"},
+            -811.707397, 3168.902832, 9.005063,
+            false,
+            ""
+        }
+    },
 }
