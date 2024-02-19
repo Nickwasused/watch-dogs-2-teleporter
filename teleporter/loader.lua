@@ -2,8 +2,7 @@ local script = Script()
 
 local tp_state = {
 	target_cords = { nil, nil, nil },
-	loaded_layers = {},
-	current_index = 1, -- great lua
+	loaded_layers = {}
 }
 script.tp_state = tp_state
 tp_state._type = tp_state
