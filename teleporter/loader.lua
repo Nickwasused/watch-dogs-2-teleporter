@@ -3,8 +3,7 @@ local script = Script()
 local tp_state = {
 	target_cord_x = nil,
 	target_cord_y = nil,
-	target_cord_z = nil,
-	last_mission = nil
+	target_cord_z = nil
 }
 script.tp_state = tp_state
 tp_state._type = tp_state
@@ -29,7 +28,7 @@ end
 -- this should fix being stuck in the ground
 -- use mssion bool to load a layer that is specific for a mission like "S13M040_Main_ServerFarm"
 function tp_state:LoadLayer_and_tp(name, x, y, z, mission)
-	print(name .. " " .. x .. " " .. y .. " " .. z .. " ")
+	script.tp_state.new_mission = name
 	ScriptHook.ShowNotification("loading " .. name)
 	script.tp_state.target_cord_x = x
 	script.tp_state.target_cord_y = y
@@ -37,15 +36,8 @@ function tp_state:LoadLayer_and_tp(name, x, y, z, mission)
 
 	if mission then
 		LoadMissionLayer2("0", tp_state, "on_loaded", name)
-		script.tp_state.last_mission = name
 	else
 		LoadLMALayer(name, "0", 1, tp_state, "on_loaded")
-	end
-
-	if script.tp_state.last_mission == name then
-		print("not unloading because tp point is in the same layer")
-	else
-		script.tp_state:unload_last_mission()
 	end
 end
 
@@ -58,29 +50,12 @@ function tp_state:on_loaded()
 	elseif script.tp_state.target_cord_z == nil then
 		ScriptHook.ShowNotification("There was an error!", 15)
 	else
-		-- ScriptHook.Teleport(script.tp_state.target_cord_x, script.tp_state.target_cord_y, script.tp_state.target_cord_z)
 		SetEntityPosition(GetLocalPlayerEntityId(), script.tp_state.target_cord_x, script.tp_state.target_cord_y, script.tp_state.target_cord_z)
-		ClearWanted()
-		ScriptHook.ShowNotification("done")
-	end
-end
-
--- unload the last loaded mission
-function tp_state:unload_last_mission()
-	local last_mission = script.tp_state.last_mission
-	if last_mission == nil then
-		print("nothing to unload")
-	else
-		print("unloading " .. last_mission)
-		ScriptHook.ShowNotification("unloading " .. last_mission)
-		UnloadMissionLayer2("0", tp_state, "", last_mission)
-		script.tp_state.last_mission = nil
 	end
 end
 
 function just_tp(x, y, z)
-	ScriptHook.Teleport(x, y, z)
-	script.tp_state:unload_last_mission()
+	SetEntityPosition(GetLocalPlayerEntityId(), x, y, z)
 end
 
 local function GetFelonyTypeID(felonyTypeName)
@@ -95,5 +70,5 @@ end
 
 -- unload the last loaded mission layer on script unload
 function script:OnUnload()
-	script.tp_state:unload_last_mission()
+
 end
