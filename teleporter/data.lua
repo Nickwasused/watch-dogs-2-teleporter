@@ -336,4 +336,140 @@ DATA = {
             ""
         }
     },
+    ["San Bruno Datacenter"] = {
+        ["Wall Breach"] = {
+            {"sf_06_serverfarms_lma"},
+            1034.674316, 2153.658203, 163.877975,
+            true,
+            ""
+        },
+        ["Inside"] = {
+            {"sf_06_serverfarms_lma"},
+            1043.431641, 2144.879395, 155.921097,
+            true,
+            ""
+        }
+    },
+    ["Ship"] = {
+        ["Outside"] = {
+            {"Barge_LMA"},
+            3142.633789, -1845.312012, 23.890188,
+            true,
+            ""
+        },
+        ["Inside"] = {
+            {"Barge_LMA"},
+            3119.286621, -1867.510498, 13.983264,
+            true,
+            ""
+        }
+    },
+    ["Soma Rensenselabs"] = {
+        ["Lab one"] = {
+            {"sf_08_soma_rensenselabs_sas", "sf_08_soma_rensenselabs_hma"},
+            354.804749, 705.479004, -10.3062401,
+            true,
+            ""
+        },
+        ["Lab two"] = {
+            {"sf_08_soma_rensenselabs_hma"},
+            308.218262, 677.031860, -11.407912,
+            true,
+            ""
+        }
+    },
+    ["Stadium"] = {
+        ["Seats"] = {
+            {},
+            -96.434723, 975.228210, 60.001828,
+            false,
+            ""
+        },
+        ["Field"] = {
+            {},
+            -163.708557, 971.315735, 19.078425,
+            false,
+            ""
+        }
+    },
+    ["Start House"] = {
+        ["Outside"] = {
+            {},
+            1120.954590, -2587.916594, 18.078384,
+            false,
+            ""
+        },
+        ["Inside"] = {
+            {"mar_02_marcusapartment_lma"},
+            1124.191162, -2595.979004, 22.086386,
+            false,
+            ""
+        }
+    },
+    ["Sutro Tower"] = {
+        ["Inside"] = {
+            {"sf_06_sutro_tower_lma"},
+            1289.464233, 1512.924561, 168.296631,
+            false,
+            ""
+        },
+        ["Tower Top"] = {
+            {},
+            1318.044434, 1498.595459, 284.284180,
+            false,
+            ""
+        }
+    },
+    ["Thruss"] = {
+        ["Penthouse"] = {
+            {"sf_08_skyscraper_lma"},
+            13.167707, 253.989471, 131.002701,
+            false,
+            ""
+        }
+    },
+    ["Tidis"] = {
+        ["Outside"] = {
+            {},
+            -265.230072, 2173.715576, 20.529942,
+            false,
+            ""
+        },
+        ["Inside"] = {
+            {"sv_02_securityplex_lma_wrenchjr01"},
+            -285.193970, 2127.669922, 26.534054,
+            false,
+            ""
+        },
+        ["Robot"] = {
+            {"sv_02_securityplex_lma_wrenchjr01"},
+            -382.132874, 2027.110474, 13.549955,
+            false,
+            ""
+        },
+        ["Serverroom"] = {
+            {"sv_02_securityplex_lma_wrenchjr01"},
+            -331.425415, 2090.673340, 13.519176,
+            false,
+            ""
+        },
+        ["Prototype Test Arena"] = {
+            {"sv_02_securityplex_lma_protolab01"},
+            -444.528809, 2209.663086, 14.492650,
+            true,
+            "You control the Spider Bot here."
+        },
+        ["Prototype Test Arena Entrance"] = {
+            {"sv_02_securityplex_lma_protolab01"},
+            -448.882202, 2140.413330, 15.505307,
+            true,
+            "You control the Spider Bot here."
+        },
+        ["Prototype Test Generator Room"] = {
+            {"sv_02_securityplex_lma_protolab01"},
+            -449.645660, 2228.059082, 44.9474953,
+            true,
+            "You control the Spider Bot here."
+        },
+    },
 }
