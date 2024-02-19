@@ -17,11 +17,20 @@ function tp_state:Shutdown()
 	local scs = CScriptCallbackSystem_GetInstance()
 end
 
+local function find_in_table(search, lma_type)
+	for key, value in pairsByKeys(script.tp_state.loaded_layers) do
+		local tmp_layer, layer_type = unpack(value)
+		if tmp_layer == search and lma_type == layer_type then
+			return key
+		end
+	end
+end
+
 -- just load the layer. Commonly used when 2 layers are needed for one teleport
 function tp_state:LoadLayer(name)
 	ScriptHook.ShowNotification("loading " .. name)
 	LoadLMALayer(name, "0", 1, function() end, "")
-	table.insert(script.tp_state.loaded_layers, { name, "lma" })
+	table.insert(script.tp_state.loaded_layers, {[name] = { "lma" }})
 end
 
 -- load a lma layer then use the callback to on_loaded to do the teleport
@@ -33,12 +42,22 @@ function tp_state:LoadLayer_and_tp(name, x, y, z, mission)
 	script.tp_state.target_cords = { x, y, z }
 
 	if mission then
-		script.tp_state.current_mission = name
 		LoadMissionLayer2("0", tp_state, "on_loaded", name)
+		local found_table = find_in_table(name, "mission")
+		if found_table ~= nil then
+			-- do not duplicate the table entry, just move it to the back
+			table.remove(script.tp_state.loaded_layers, found_table)
+		end
+
 		table.insert(script.tp_state.loaded_layers, { name, "mission" })
 	else
-		script.tp_state.current_mission = nil
 		LoadLMALayer(name, "0", 1, tp_state, "on_loaded")
+		local found_table = find_in_table(name, "lma")
+		if found_table ~= nil then
+			-- do not duplicate the table entry, just move it to the back
+			table.remove(script.tp_state.loaded_layers, found_table)
+		end
+
 		table.insert(script.tp_state.loaded_layers, { name, "lma" })
 	end
 end
@@ -59,25 +78,11 @@ function tp_state:on_loaded()
 	end
 end
 
-function dump(o)
-	if type(o) == 'table' then
-	   local s = '{ '
-	   for k,v in pairs(o) do
-		  if type(k) ~= 'number' then k = '"'..k..'"' end
-		  s = s .. '['..k..'] = ' .. dump(v) .. ','
-	   end
-	   return s .. '} '
-	else
-	   return tostring(o)
-	end
- end
- 
-
 -- unload the last loaded mission
 function tp_state:unload_last_mission()
 	if tablelength(script.tp_state.loaded_layers) > 2 then
 		local tmp_layer, layer_type = unpack(script.tp_state.loaded_layers[1])
-		print("unloading " .. tmp_layer)
+		ScriptHook.ShowNotification("unloading " .. tmp_layer)
 		if layer_type == "mission" then
 			UnloadMissionLayer2("0", tp_state, "", tmp_layer)
 		elseif layer_type == "lma" then
@@ -107,7 +112,5 @@ end
 
 -- unload the last loaded mission layer on script unload
 function script:OnUnload()
-	-- set this to bypass unload check
-	script.tp_state.current_mission = "nickwasused"
 	script.tp_state:unload_last_mission()
 end
