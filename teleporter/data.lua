@@ -142,4 +142,32 @@ DATA = {
             "Featured at the end of the Game."
         }
     },
+    ["FBI Tower"] = {
+        ["Inside (Bottom)"] = {
+            {"oak_01_civiccenter_dellumtower_sas"},
+            -2089.043457, -985.501709, 19.986208,
+            true,
+            ""
+        },
+        ["Inside (Top)"] = {
+            {"oak_01_civiccenter_dellumtower_hma"},
+            -2059.158447, -972.452515, 89.286774,
+            true,
+            ""
+        }
+    },
+    ["Fort Point"] = {
+        ["Outside"] = {
+            {},
+            2119.341797, -1053.109009, 16.557859,
+            false,
+            ""
+        },
+        ["Inside"] = {
+            {},
+            2155.328857, -1080.221436, 16.564962,
+            false,
+            ""
+        }
+    },
 }
