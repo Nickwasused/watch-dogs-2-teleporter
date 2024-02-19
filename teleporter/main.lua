@@ -1,30 +1,14 @@
 local script = Script()
 -- loader
-include("/menu/loader/loader.lua")
+include("/loader.lua")
+-- location data
+include("/data.lua")
 
 function script:OnLoad()
     local menu = UI.SimpleMenu()
     menu:AddSearch("Search...")
 
     menu:SetTitle("Teleporter | Nickwasused")
-
-    local DATA = {
-		["Blume"] = {
-			["Blume CTOS Server Farm (Outside)"] = {
-                "",
-                -613.188721, -1358.770752, 16.090664,
-                false,
-                ""
-            },
-            ["Blume CTOS Server Farm (Serverroom)"] = {
-                "sf_09_ctos_data_center_lma",
-                -633.506470, -1389.237549, -2.054199,
-                false,
-                ""
-            }
-		}
-	}
-
 
     -- key: Category name e.g. Blume
     -- value: the data inside
@@ -42,7 +26,9 @@ function script:OnLoad()
                         just_tp(x, y, z)
                     end)
                 else
+                    print(is_mission)
                     tmp_menu:AddButton(key2, description, function()
+                        print(is_mission)
                         Script().tp_state:LoadLayer_and_tp(layer, x, y, z, is_mission)
                     end)
                 end

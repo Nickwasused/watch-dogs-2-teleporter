@@ -30,7 +30,8 @@ end
 -- load a lma layer then use the callback to on_loaded to do the teleport
 -- this should fix being stuck in the ground
 -- use mssion bool to load a layer that is specific for a mission like "S13M040_Main_ServerFarm"
-function tp_state:LoadLayer_and_tp(name, x, y , z, mission)
+function tp_state:LoadLayer_and_tp(name, x, y, z, mission)
+	print(name .. " " .. x .. " " .. y .. " " .. z .. " ")
 	if script.tp_state.last_mission == name then
 		print("not unloading because tp point is in the same layer")
 	else
