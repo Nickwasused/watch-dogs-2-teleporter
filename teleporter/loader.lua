@@ -29,14 +29,13 @@ end
 function tp_state:LoadLayer(name)
 	ScriptHook.ShowNotification("loading " .. name)
 	LoadLMALayer(name, "0", 1, function() end, "")
-	table.insert(script.tp_state.loaded_layers, {[name] = { "lma" }})
+	table.insert(script.tp_state.loaded_layers, { name, "lma" })
 end
 
 -- load a lma layer then use the callback to on_loaded to do the teleport
 -- this should fix being stuck in the ground
 -- use mssion bool to load a layer that is specific for a mission like "S13M040_Main_ServerFarm"
 function tp_state:LoadLayer_and_tp(name, x, y, z, mission)
-	print(dump(script.tp_state.loaded_layers))
 	ScriptHook.ShowNotification("loading " .. name)
 	script.tp_state.target_cords = { x, y, z }
 
