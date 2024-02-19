@@ -1,0 +1,10 @@
+{
+	"name": "Change character",
+	"author": "Nickwasused",
+	"version": "1.0",
+	
+	"entrypoint": "main.lua",
+	"keyBinds": {
+		"menu": "F6"
+	}
+}
