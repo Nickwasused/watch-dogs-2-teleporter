@@ -30,7 +30,9 @@ function script:OnLoad()
             for key2, value2 in pairsByKeys(value) do
                 local layer, x, y, z, is_mission, description = unpack(value2)
 
-                if layer == {} then
+                local layer_lenght = tablelength(layer)
+
+                if layer_lenght == 0 then
                     tmp_menu:AddButton(key2, description, function()
                         just_tp(x, y, z)
                     end)
@@ -38,7 +40,6 @@ function script:OnLoad()
                     tmp_menu:AddButton(key2, description, function()
                         -- loop over the table and load all layers except for the last one
                         -- on the last layer wait for callback and then teleport
-                        local layer_lenght = tablelength(layer)
                         for key, tmp_layer in pairsByKeys(layer) do
                             if key == layer_lenght then
                                 -- last layer

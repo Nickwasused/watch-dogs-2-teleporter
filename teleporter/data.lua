@@ -71,16 +71,75 @@ DATA = {
     },
     ["Coit Tower"] = {
         ["top"] = {
-            "",
+            {},
             652.669189, -566.513428, 133.730072,
             false,
             ""
         },
         ["bottom"] = {
-            "",
+            {},
             650.781433, -598.100098, 83.507164,
             false,
             ""
         }
-    }
+    },
+    ["Dedsec HQ"] = {
+        ["San Francisco HQ | Outside"] = {
+            {},
+            809.033081, 921.227831, 33.60579,
+            false,
+            ""
+        },
+        ["San Francisco HQ | Inside"] = {
+            {},
+            809.969238, 917.381348, 27.271181,
+            false,
+            ""
+        },
+        ["Oakland HQ | Outside"] = {
+            {},
+            -2663.499512, -437.213501, 21.449339,
+            false,
+            ""
+        },
+        ["Oakland HQ | Inside"] = {
+            {},
+            -2653.000488, -449.066010, 21.549318,
+            false,
+            ""
+        },
+        ["Silicon Valley HQ | Outside"] = {
+            {},
+            -257.184631, 3287.341797, 22.107433,
+            false,
+            ""
+        },
+        ["Silicon Valley HQ | Inside"] = {
+            {},
+            -257.463989, 3284.399902, 22.055016,
+            false,
+            ""
+        },
+        ["Marin HQ | Outside"] = {
+            {},
+            1336.049805, -2625.875977, 27.988195,
+            false,
+            ""
+        },
+        ["Marin HQ | Inside"] = {
+            -- we just need to load this one
+            {"mar_01_hackerspace_hma"},
+            1364.879883, -2667.060059, 14.205064,
+            false,
+            ""
+        }
+    },
+    ["Dusan Penthouse"] = {
+        ["Dusan Penthouse"] = {
+            {"sf_08_dusanpenthouse_lma"},
+            298.337494, 285.072327, 235.018411,
+            false,
+            "Featured at the end of the Game."
+        }
+    },
 }
