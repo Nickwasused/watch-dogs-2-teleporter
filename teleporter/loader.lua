@@ -19,6 +19,12 @@ function tp_state:Shutdown()
 	local scs = CScriptCallbackSystem_GetInstance()
 end
 
+-- just load the layer. Commonly used when 2 layers are needed for one teleport
+function tp_state:LoadLayer(name)
+	ScriptHook.ShowNotification("loading " .. name)
+	LoadLMALayer(name, "0", 1, function() end, "")
+end
+
 -- load a lma layer then use the callback to on_loaded to do the teleport
 -- this should fix being stuck in the ground
 -- use mssion bool to load a layer that is specific for a mission like "S13M040_Main_ServerFarm"
