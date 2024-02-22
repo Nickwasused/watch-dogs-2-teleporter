@@ -350,6 +350,20 @@ DATA = {
             ""
         }
     },
+    ["Provi Blue Bank/Insurance"] = {
+        ["Inside"] = {
+            {},
+            92.665352, 48.515518, 58.524601,
+            false,
+            ""
+        },
+        ["Outside"] = {
+            {},
+            159.049500, 82.248161, 15.147787,
+            false,
+            ""
+        }
+    },
     ["San Bruno Datacenter"] = {
         ["Wall Breach"] = {
             {"sf_06_serverfarms_lma"},
