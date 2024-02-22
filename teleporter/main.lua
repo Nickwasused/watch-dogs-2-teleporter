@@ -1,4 +1,7 @@
 local script = Script()
+-- commands
+include("/commands.lua")
+
 -- loader
 include("/loader.lua")
 -- location data

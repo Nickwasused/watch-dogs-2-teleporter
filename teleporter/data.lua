@@ -336,6 +336,20 @@ DATA = {
             ""
         }
     },
+    ["Payphone Mission House"] = {
+        ["Inside"] = {
+            {},
+            1454.360107, -668.590698, 11.153848,
+            false,
+            "Floor has weird collision"
+        },
+        ["Outside"] = {
+            {},
+            1457.633301, -662.820190, 28.795694,
+            false,
+            ""
+        }
+    },
     ["San Bruno Datacenter"] = {
         ["Wall Breach"] = {
             {"sf_06_serverfarms_lma"},
@@ -347,6 +361,20 @@ DATA = {
             {"sf_06_serverfarms_lma"},
             1043.431641, 2144.879395, 155.921097,
             true,
+            ""
+        }
+    },
+    ["Suicide Garage"] = {
+        ["Inside"] = {
+            {"iop05_main"},
+            -2690.858398, 640.774353, 16.973396,
+            true,
+            ""
+        },
+        ["Outside"] = {
+            {},
+            -2682.615967, 640.394592, 17.148958,
+            false,
             ""
         }
     },
