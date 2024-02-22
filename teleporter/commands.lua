@@ -24,6 +24,12 @@ local function lma_unload(layer)
     UnloadLMALayer(layer, function() end, "")
 end
 
+-- tp spawnpoint
+
+local function teleport_spawnpoint(id)
+    TeleportToSpawnPoint_v2(GetLocalPlayerId(), id, 1, 0, "", 0, function() end, "")
+end
+
 -- Register commands
 local cmd_tp = ScriptHook.RegisterCommand("tp", teleport)
 cmd_tp:AddArgument("x", true, CommandArgumentType.Float)
@@ -46,3 +52,7 @@ cmd_lma_load:SetDescription("Load a LMA Layer")
 local cmd_lma_unload = ScriptHook.RegisterCommand("lma-unload", lma_unload)
 cmd_lma_unload:AddArgument("layer", true, CommandArgumentType.String)
 cmd_lma_unload:SetDescription("Unload a LMA Layer")
+
+local cmd_tp_spawnpoint = ScriptHook.RegisterCommand("tp-spawn", teleport_spawnpoint)
+cmd_tp_spawnpoint:AddArgument("id", true, CommandArgumentType.String)
+cmd_tp_spawnpoint:SetDescription("Teleport to a spawnpoint")
