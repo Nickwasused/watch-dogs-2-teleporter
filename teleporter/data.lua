@@ -364,6 +364,32 @@ DATA = {
             ""
         }
     },
+    ["Pharmingtons"] = {
+        ["Small Office Inside"] = {
+            {},
+            645.969849, -254.351471, 24.184937,
+            false,
+            ""
+        },
+        ["Small Office Outside"] = {
+            {},
+            639.030945, -240.197174, 24.144583,
+            false,
+            ""
+        },
+        ["Office Inside"] = {
+            {},
+            303.186829, -364.578003, 33.923618,
+            false,
+            ""
+        },
+        ["Office Outside"] = {
+            {},
+            308.482605, -328.462830, 18.845022,
+            false,
+            ""
+        }
+    },
     ["San Bruno Datacenter"] = {
         ["Wall Breach"] = {
             {"sf_06_serverfarms_lma"},
