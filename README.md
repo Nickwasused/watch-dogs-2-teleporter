@@ -31,8 +31,8 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 What things you need to install the software and how to install them.
 
-```Scripthook``` [is required](https://db.nomad-group.net/page/WD2_ScriptHook:_Instructions)
-```Watch Dogs 2``` [is required](https://store.steampowered.com/app/447040/Watch_Dogs_2/)
+```Scripthook``` [is required](https://db.nomad-group.net/page/WD2_ScriptHook:_Instructions)  
+```Watch Dogs 2``` [is required](https://store.steampowered.com/app/447040/Watch_Dogs_2/)  
 
 ### Installing
 
